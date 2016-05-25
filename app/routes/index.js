@@ -1,20 +1,17 @@
 'use strict';
 
-//var ImgSearch = require(process.cwd() + '/app/controllers/imgSearch.server.js');
+var FileUpload = require(process.cwd() + '/app/controllers/fileUpload.server.js');
 
 module.exports = function (app) {
   
-  //var imgSearch = new ImgSearch();
+  var fileUpload = new FileUpload();
   
   app.route('/')
       .get(function (req, res) {
           res.sendFile(process.cwd() + '/public/index.html');
       });
-/*
-  app.route('/api/search/latest')
-      .get(imgSearch.getLatest);
 
-  app.route('/api/search/:term')
-      .get(imgSearch.getSearch);
-      */
+  app.route('/upload')
+      .post(fileUpload.getInfo);
+
 };
