@@ -15,6 +15,15 @@
     .container a:hover {
       color: #fff;
     }
+    .file_size {
+      color: #fff;
+      background: #4d4d50;
+      padding: .7rem 1.5rem;
+      height: 3.2rem;
+      line-height: 1.6rem;
+      text-align: center;
+      width: 20%;
+    }
     .title {
       color: #77B3D4;
     }
@@ -46,6 +55,7 @@
     .inputfile + label:hover {
       opacity: 0.9;
     }
+    
     </style>
     <link href="/public/css/spectre.min.css" rel="stylesheet" type="text/css">
 	</head>
@@ -66,6 +76,7 @@
             <div class="input-group column">
                 <input type="file" name="file" id="file" class="inputfile">
                 <label for="file">Choose a file</label>
+                <span class="file_size"></span>
                 <button id="upload" class="btn btn-primary input-group-btn">Upload!</button>
             </div>
             </form>
